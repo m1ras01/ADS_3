@@ -22,4 +22,12 @@ public class MyArrayList {
     public int size() {
         return size;
     }
+    public boolean contains(Object o) {
+        for(Object element : arr){
+            if(element != null && element.equals(o)){
+                return true;
+            }
+        }
+        return false;
+    }
 }
