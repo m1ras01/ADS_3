@@ -81,6 +81,13 @@ public class MyArrayList<T> implements MyList {
             }
         }
         return -1;
-
+    }
+    public int lastIndexOf(Object o) {
+        for(int i=size-1; i>=0; i--){
+            if(arr[i] != null && arr[i].equals(o)){
+                return i;
+            }
+        }
+        return -1;
     }
 }
