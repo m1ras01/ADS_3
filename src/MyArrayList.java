@@ -70,4 +70,9 @@ public class MyArrayList<T> implements MyList {
         this.arr = new Object[5];
         this.size = 0;
     }
+    public Object get(int index) {
+        checkIndex(index);
+        return (T) arr[index];
+    }
+
 }
