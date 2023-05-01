@@ -102,5 +102,4 @@ If you attempt to dequeue or peek an element from an empty queue, the methods wi
 ## __Implementation Details__
 The `MyArrayListStack` class implements a stack data structure using an array list. The `push` method adds an element to the top of the stack by appending it to the end of the array list. The `pop` method removes and returns the element on top of the stack by removing the last element from the array list. The `peek` method returns the element on top of the stack without removing it by returning the last element in the array list. The `isEmpty` method returns true if the array list is empty, and false otherwise. The `size` method returns the number of elements in the array list.
 
-
 ![](https://c.tenor.com/5GmWzNk994gAAAAC/thank-you-obama.gif)
