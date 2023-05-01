@@ -90,4 +90,15 @@ public class MyArrayList<T> implements MyList {
         }
         return -1;
     }
+    public void sort() {
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (((Comparable)arr[i]).compareTo(arr[j]) > 0) {
+                    Object temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+    }
 }
