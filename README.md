@@ -1,4 +1,4 @@
- # __MyArrayListQueue__
+# __MyArrayListQueue__
  `MyArrayListQueue` is a Java class that provides an implementation of a generic queue using an underlying `MyArrayList`.
 
 <br />
@@ -21,8 +21,3 @@ You can remove elements from the front of the queue using the `dequeue` method:
  ```
 
 <br />
-
-
-<br/>
-
-![](https://c.tenor.com/5GmWzNk994gAAAAC/thank-you-obama.gif)
