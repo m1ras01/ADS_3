@@ -14,4 +14,20 @@ public class MyArrayListQueue<E> {
         checkEmpty();
         return (E) array.remove(0);
     }
+    public E peek() {
+        checkEmpty();
+        return (E) array.get(0);
+    }
+
+    public boolean isEmpty() {
+        return array.size() == 0;
+    }
+    public int size() {
+        return array.size();
+    }
+    public void checkEmpty(){
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+    }
 }
