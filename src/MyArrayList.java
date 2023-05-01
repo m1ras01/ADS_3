@@ -6,6 +6,7 @@ public class MyArrayList<T> implements MyList {
         this.arr = new Object[5];
         this.size = 0;
     }
+    @Override
     public void add(Object item) {
         if(size == arr.length){
             increaseBuffer();
@@ -19,9 +20,11 @@ public class MyArrayList<T> implements MyList {
         }
         arr = newArr;
     }
+    @Override
     public int size() {
         return size;
     }
+    @Override
     public boolean contains(Object o) {
         for(Object element : arr){
             if(element != null && element.equals(o)){
@@ -30,6 +33,7 @@ public class MyArrayList<T> implements MyList {
         }
         return false;
     }
+    @Override
     public void add(Object item, int index) {
         if (index > size || index < 0) {
             throw new IndexOutOfBoundsException();
@@ -43,6 +47,9 @@ public class MyArrayList<T> implements MyList {
         arr[index] = item;
         size++;
     }
+
+
+    @Override
     public boolean remove(Object item) {
         for(int i=0; i<size; i++){
             if(arr[i] != null && arr[i].equals(item)){
@@ -52,11 +59,14 @@ public class MyArrayList<T> implements MyList {
         }
         return false;
     }
+
     public void checkIndex(int index){
         if(index < 0 || index>=size){
             throw new IndexOutOfBoundsException();
         }
     }
+
+    @Override
     public Object remove(int index) {
         checkIndex(index);
         T removed = (T) arr[index];
@@ -66,14 +76,20 @@ public class MyArrayList<T> implements MyList {
         size--;
         return removed;
     }
+
+    @Override
     public void clear(){
         this.arr = new Object[5];
         this.size = 0;
     }
+
+    @Override
     public Object get(int index) {
         checkIndex(index);
         return (T) arr[index];
     }
+
+    @Override
     public int indexOf(Object o) {
         for(int i=0; i<size; i++){
             if(arr[i] != null && arr[i].equals(o)){
@@ -82,6 +98,8 @@ public class MyArrayList<T> implements MyList {
         }
         return -1;
     }
+
+    @Override
     public int lastIndexOf(Object o) {
         for(int i=size-1; i>=0; i--){
             if(arr[i] != null && arr[i].equals(o)){
@@ -90,6 +108,8 @@ public class MyArrayList<T> implements MyList {
         }
         return -1;
     }
+
+    @Override
     public void sort() {
         for (int i = 0; i < size - 1; i++) {
             for (int j = i + 1; j < size; j++) {
