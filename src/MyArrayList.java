@@ -19,4 +19,7 @@ public class MyArrayList {
         }
         arr = newArr;
     }
+    public int size() {
+        return size;
+    }
 }
