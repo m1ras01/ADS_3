@@ -66,4 +66,8 @@ public class MyArrayList<T> implements MyList {
         size--;
         return removed;
     }
+    public void clear(){
+        this.arr = new Object[5];
+        this.size = 0;
+    }
 }
