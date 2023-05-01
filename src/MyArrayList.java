@@ -30,4 +30,17 @@ public class MyArrayList {
         }
         return false;
     }
+    public void add(Object item, int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (size == arr.length) {
+            increaseBuffer();
+        }
+        for(int i=size-1; i>=index; i--){
+            arr[i+1] = arr[i];
+        }
+        arr[index] = item;
+        size++;
+    }
 }
