@@ -1,4 +1,4 @@
-public class MyArrayList {
+public class MyArrayList<T> implements MyList {
     private Object[] arr;
     private int size = 0;
 
@@ -56,5 +56,14 @@ public class MyArrayList {
         if(index < 0 || index>=size){
             throw new IndexOutOfBoundsException();
         }
+    }
+    public Object remove(int index) {
+        checkIndex(index);
+        T removed = (T) arr[index];
+        for(int i=index; i<size-1; i++){
+            arr[i]=arr[i+1];
+        }
+        size--;
+        return removed;
     }
 }
