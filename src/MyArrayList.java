@@ -43,4 +43,14 @@ public class MyArrayList {
         arr[index] = item;
         size++;
     }
+    public boolean remove(Object item) {
+        for(int i=0; i<size; i++){
+            if(arr[i] != null && arr[i].equals(item)){
+                remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
