@@ -1,6 +1,6 @@
 # __MyArrayListQueue__
  `MyArrayListQueue` is a Java class that provides an implementation of a generic queue using an underlying `MyArrayList`.
-
+ 
 <br />
 
 ## __How to Use__
