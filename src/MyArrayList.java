@@ -74,5 +74,13 @@ public class MyArrayList<T> implements MyList {
         checkIndex(index);
         return (T) arr[index];
     }
+    public int indexOf(Object o) {
+        for(int i=0; i<size; i++){
+            if(arr[i] != null && arr[i].equals(o)){
+                return i;
+            }
+        }
+        return -1;
 
+    }
 }
